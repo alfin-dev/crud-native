@@ -13,6 +13,13 @@ pipeline {
             }
         }
 
+        stage ('Error') {
+            steps {
+                echo 'Hello Error'
+                sh ('Error')
+            }
+        }
+
         stage ('Deploy') {
             steps {
                 echo 'Hello Deploy'
